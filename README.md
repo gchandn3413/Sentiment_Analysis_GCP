@@ -20,4 +20,14 @@ It works with python 3.7.x. It primarly consists of calling twitter api to fetch
 2. This application is near real-time in nature.
 
 # Auto Deployment
-1. 
+This repo contains deployment_twitter_analysis.sh which can be executed in any Linux based compute engine to auto deploy the application. Below is the command - 
+
+sh deployment_twitter_analysis.sh
+
+# Execution
+To execute the application, below is the command. It takes 3 arguments with below options - 
+-k -- Search Keyword
+-d -- Number of days back from today for starting the sentiment analysis
+-i -- Path of the GCP service credential json file
+
+nohup python3 sentiment_analysis_gcp.py -d 4 -i /home/gaurav_chandna02/sentiment_analysis_gcp/cred.json -k india >> out.log &
