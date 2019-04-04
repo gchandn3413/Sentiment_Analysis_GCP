@@ -24,6 +24,11 @@ This repo contains deployment_twitter_analysis.sh which can be executed in any L
 
 sh deployment_twitter_analysis.sh
 
+On GCP, 3 services are required - 
+1. Google Storage: - create a bucket and provide public access
+2. Google Natural Language Processing API: - Enable GCP NLP API
+3. Google Compute Engine: - Spin up a Linux based Compute engine with default resources.
+
 # Execution
 To execute the application, below is the command. It takes 3 arguments with below options - 
 -k -- Search Keyword
