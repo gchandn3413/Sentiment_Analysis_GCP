@@ -20,7 +20,7 @@ It works with python 3.7.x. It primarly consists of calling twitter api to fetch
 2. This application is near real-time in nature.
 
 # Auto Deployment
-This repo contains deployment_twitter_analysis.sh which can be executed in any Linux based compute engine to auto deploy the application. Below is the command - 
+This repo contains deployment_twitter_analysis.sh which can be executed in any Linux based compute engine to auto deploy the application. The package contains a sentiment_analysis.cofig file which contains the configurable setting for the project. This file needs to edited based on the current deployment. Below is the command - 
 
 sh deployment_twitter_analysis.sh
 
@@ -36,3 +36,17 @@ To execute the application, below is the command. It takes 3 arguments with belo
 -i -- Path of the GCP service credential json file
 
 nohup python3 sentiment_analysis_gcp.py -d 4 -i /home/gaurav_chandna02/sentiment_analysis_gcp/cred.json -k india >> out.log &
+
+# Testing the Twitter Sentiment Analysis script
+For testing the script, python unit test framework has been implemented. The script name is test_sentiment_analysis_gcp.py. The package also contains test_sentiment_analysis.config which contains the configurable setting for the testing. This needs be edited based on the test env. Below is the command to execute the test script
+
+python3 test_sentiment_analysis_gcp.py
+
+It contains below 3 test cases: -
+1. test_tweetsCount - This function tests whether the number of tweets returned from twitter is as per desired count or not.
+2. test_score - This function tests whether the sentiment score returned from the GCP NLP service is between -1.0 and 1.0 or not.
+3. test_bucket_object - This function tests whether the object has been uploaded to GS bucket or not.
+
+# Test Results
+
+![alt text](https://github.com/gchandn3413/Sentiment_Analysis_GCP/blob/master/Test_Results.png)
