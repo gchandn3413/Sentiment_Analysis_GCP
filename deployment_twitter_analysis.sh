@@ -29,7 +29,7 @@ fi
 
 
 cd temp_git_checkout
-rm -rf Sentiment_Analysis_GCP
+rm -rf Sentiment_Analysis_GCP/
 git clone https://github.com/gchandn3413/Sentiment_Analysis_GCP.git
 
 cd ~/sentiment_analysis_deployment
