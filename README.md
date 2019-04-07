@@ -1,6 +1,6 @@
 # Twitter Sentiment Analysis on Google Cloud Platform (GCP)
 # Highlights
-This project performs near real time twitter sentiment analysis on Google Cloud Platform. It accepts a keyword parameter (or none) as input. Then displays a graphical representation of the sentiment of incoming tweets, updated in near real-time. It also allows to filter the tweets based on the keyword and include only those tweets containing the keyword. It continues to update automatically as new tweets arrive, until the application is closed.
+This project performs near real time twitter sentiment analysis on Google Cloud Platform. It accepts a keyword parameter (or none) as input. It then displays a graphical representation of the sentiment of incoming tweets, updated in near real-time. It also allows to filter the tweets based on the keyword and include only those tweets containing the keyword. It continues to update automatically as new tweets arrive, until the application is closed.
 
 The output contains 2 charts.
 1. "Since Start" - displays the live trend based on the # of days back from current date from which the application was started.
@@ -20,13 +20,13 @@ It works with python 3.7.x. It primarly consists of calling twitter api to fetch
 2. This application is near real-time in nature.
 
 # Auto Deployment
-This repo contains deployment_twitter_analysis.sh which can be executed in any Linux based compute engine to auto deploy the application. The package contains a sentiment_analysis.cofig file which contains the configurable setting for the project. This file needs to edited based on the current deployment. Below is the command - 
+This repo contains deployment_twitter_analysis.sh which can be executed in any Linux based compute engine to auto-deploy the application. The package contains a sentiment_analysis.cofig file which contains the configurable setting for the project. This file needs to edited based on the current deployment. Below is the command to start auto-deployment - 
 
 sh deployment_twitter_analysis.sh
 
 On GCP, 3 services are required - 
-1. Google Storage: - create a bucket and provide public access
-2. Google Natural Language Processing API: - Enable GCP NLP API
+1. Google Storage: - create a bucket and provide public access.
+2. Google Natural Language Processing API: - Enable GCP NLP API.
 3. Google Compute Engine: - Spin up a Linux based Compute engine with default resources.
 
 # Execution
