@@ -6,6 +6,13 @@ The output contains 2 charts.
 1. "Since Start" - displays the live trend based on the # of days back from current date from which the application was started.
 2. "Last Run" - displays the live trend for the last x seconds (configurable).
 
+The chart is distributed into 4 categories namely - mixed, positive, negative and neutral. Each tweets is scored from GCP NLP API and categorized into either one of four based on following criteria.
+
+1. Mixed = Score of 0.0
+2. Positive = Score of 0.0> and >=0.3,
+3. Neutral = Score of 0.0>and <0.3 
+4. Negative = Score of <0.0 
+
 Here is the sample of the output charts generated: -
 
 ![alt text](https://github.com/gchandn3413/Sentiment_Analysis_GCP/blob/master/Application_output.png)
