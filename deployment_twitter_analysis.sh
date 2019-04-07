@@ -5,6 +5,7 @@ sudo apt-get update -f -y --force-yes
 sudo apt install python3-pip -f -y --force-yes
 sudo apt-get install vim -f -y --force-yes
 sudo apt-get install git -f -y --force-yes
+sudo apt-get install dos2unix -f -y --force-yes
 #sudo apt install tcl-dev tk-dev python-tk python3-tk
 
 #install python libraries
@@ -33,4 +34,7 @@ git clone https://github.com/gchandn3413/Sentiment_Analysis_GCP.git
 cd ~/sentiment_analysis_deployment
 cp ~/temp_git_checkout/Sentiment_Analysis_GCP/* .
 
+dos2unix *
+
 gsutil cp index.html gs://$gs_bucket_name
+#gsutil iam ch user:gaurav.chandna02@gmail.com:objectCreator,objectViewer gs://sentiment_analysis_gaurav
